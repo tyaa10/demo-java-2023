@@ -2,9 +2,7 @@ package org.tyaa.demo.java2023;
 
 import static java.lang.System.out;
 
-import org.tyaa.demo.java2023.models.IShape;
-import org.tyaa.demo.java2023.models.Line;
-import org.tyaa.demo.java2023.models.Point;
+import org.tyaa.demo.java2023.models.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +25,7 @@ public class Main {
 
         /* 2 */
 
-        Point p1 = new Point();
+        /* Point p1 = new Point();
         p1.setX(100);
         p1.y = 100;
 
@@ -47,6 +45,25 @@ public class Main {
         for (IShape shape : shapes) {
             shape.goToAbsoluteStart();
             out.println(shape);
+        } */
+
+        // Knight k1 = new Knight();
+        // k1.name = "k-1";
+        Knight k1 = new Knight("k-1", new Axe());
+        // k1.doAction();
+        k1.setWeapon(new Sword());
+        // k1.doAction();
+
+        Knight k2 = new Knight("k-2", new Axe());
+
+        List<Knight> knights = new ArrayList<>();
+        knights.add(k1);
+        knights.add(k2);
+
+        for (Knight k : knights) {
+            out.println(k.name);
+            k.doAction();
+            out.println();
         }
     }
 }
