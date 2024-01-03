@@ -49,7 +49,7 @@ public class Main {
 
         // Knight k1 = new Knight();
         // k1.name = "k-1";
-        Knight k1 = new Knight("k-1", new Axe());
+        /* Knight k1 = new Knight("k-1", new Axe());
         // k1.doAction();
         k1.setWeapon(new Sword());
         // k1.doAction();
@@ -64,6 +64,12 @@ public class Main {
             out.println(k.name);
             k.doAction();
             out.println();
-        }
+        } */
+        Point p3 = new Point();
+        p3.x(200).y(300);
+
+        Point p4 = new Point(100, 200);
+
+        Point p5 = Point.builder().y(120).x(300);
     }
 }
