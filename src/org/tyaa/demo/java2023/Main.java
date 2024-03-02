@@ -65,11 +65,16 @@ public class Main {
             k.doAction();
             out.println();
         } */
-        Point p3 = new Point();
+        /* Point p3 = new Point();
         p3.x(200).y(300);
 
         Point p4 = new Point(100, 200);
 
-        Point p5 = Point.builder().y(120).x(300);
+        Point p5 = Point.builder().y(120).x(300);*/
+
+        // out.println((new DemoClass()).sqr(5.0));
+        // out.println((new DemoClass()).sqr(5d));
+        out.println((new DemoClass()).sqrt(25d));
+
     }
 }
