@@ -2,6 +2,10 @@ package org.tyaa.demo.java2023;
 
 import static java.lang.System.out;
 
+import org.tyaa.demo.java2023.actions.Math;
+import org.tyaa.demo.java2023.actions.simple.ISimpleAction;
+import org.tyaa.demo.java2023.actions.simple.Minus;
+import org.tyaa.demo.java2023.actions.simple.Sum;
 import org.tyaa.demo.java2023.models.*;
 
 import java.util.ArrayList;
@@ -74,7 +78,33 @@ public class Main {
 
         // out.println((new DemoClass()).sqr(5.0));
         // out.println((new DemoClass()).sqr(5d));
-        out.println((new DemoClass()).sqrt(25d));
+        // out.println((new DemoClass()).sqrt(25d));
 
+        // Math.calc(2, 3);
+        // out.println(Math.calc(2, 3));
+        double result = Math.calc(2, 3, new Sum());
+        out.println(result);
+
+        result = Math.calc(2, 3, new Minus());
+        out.println(result);
+
+        result = Math.calc(2, 3, new ISimpleAction() {
+            @Override
+            public double action(double a, double b) {
+                return a * b;
+            }
+        });
+        out.println(result);
+
+        /* result = Math.calc(2, 3, (x1, y1) -> { return x1 / y1; });
+        out.println(result); */
+
+        result = Math.calc(2, 3, (x1, y1) -> x1 / y1);
+        out.println(result);
+
+        // по образцу добавить здесь код, который будет рассчитывать длину гипотенузы
+        // по длинам двух катетов и выводить результат в консоль
+
+        out.println(java.lang.Math.max(100500, 900100));
     }
 }
